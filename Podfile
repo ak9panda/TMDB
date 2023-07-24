@@ -11,6 +11,7 @@ target 'TMDB' do
   pod 'RxCocoa'
   pod 'RxRealm', '~> 5.0'
   pod 'SDWebImage'
+  pod 'SnapKit'
 
   target 'TMDBTests' do
     inherit! :search_paths

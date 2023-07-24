@@ -19,10 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         
-        let vc = UIViewController()
-        vc.view.backgroundColor = .red
+        let module = HomeRouter.createModule()
         let navigationController = UINavigationController()
-        navigationController.viewControllers = [vc]
+        navigationController.viewControllers = [module]
+        
+        UINavigationBar.appearance().isTranslucent = false
         
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
